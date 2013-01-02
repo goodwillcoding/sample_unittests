@@ -29,9 +29,6 @@ def split_argument(string):
     colon_pos = string.find(":")
     equal_pos = string.find("=")
 
-    print "colon_pos:", colon_pos
-    print "equal_pos:", equal_pos
-
     if (colon_pos == -1) and (equal_pos == -1):
         raise NoSeparatorError(
             "List element '%s' is missing a separator, either ':' or '='"
@@ -46,8 +43,6 @@ def split_argument(string):
         separator_pos = colon_pos
     elif equal_pos > -1 and colon_pos == -1:
         separator_pos = equal_pos
-
-    print "separator_pos:", separator_pos
 
     # return (key, value)
     return (string[:separator_pos], string[separator_pos + 1:])
