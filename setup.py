@@ -40,23 +40,25 @@ except IOError:
 
 # install requires
 install_requires = [
+    'nose',
+    'coverage',
+    'nosexcover',
     ]
 
 # testing requires
 tests_require = [
     ]
 
+
 # testing extras are used in a command
 testing_extras = tests_require + [
-    'nose',
-    'coverage',
-    'nosexcover',
     'ipython',
     'ipdb'
     ]
 
 # documentation generation requires
 docs_extras = [
+    'docutils'
     ]
 
 
